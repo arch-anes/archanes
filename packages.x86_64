@@ -45,6 +45,7 @@ ntp
 openconnect
 openssh
 openvpn
+pacman-contrib
 partclone
 parted
 partimage
