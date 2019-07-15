@@ -17,3 +17,6 @@ echo "LANG=en_US.UTF-8" > $ROOT/etc/locale.conf
 
 echo "anes-archlinux" > $ROOT/etc/hostname
 
+/root/install_aur_helper.sh
+/root/install_packages.sh
+
