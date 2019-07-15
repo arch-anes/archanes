@@ -1,6 +1,12 @@
 # Anes' Arch Linux custom ISO
 
-## Installation steps
+## Build
+
+Run `$ sudo ./build.sh`. ISO image will be located in `out` folder.
+
+## Install
+
+- Boot into the ISO image
 
 - Setup and mount root (and boot) partitions in `/mnt`
 
