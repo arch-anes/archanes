@@ -3,6 +3,8 @@
 ROOT="/mnt"
 CHROOT="arch-chroot $ROOT"
 
+$CHROOT pacman -S --needed git
+
 BUILD=/home/build
 
 $CHROOT mkdir -p $BUILD

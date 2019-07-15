@@ -10,7 +10,6 @@ dotnet-sdk
 gdb                 
 ghc                 
 git                 
-gmock               
 jdk8-openjdk        
 jetbrains-toolbox   
 jlink-software-and-documentation
