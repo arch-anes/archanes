@@ -3,8 +3,6 @@
 ROOT="/mnt"
 CHROOT="arch-chroot $ROOT"
 
-$CHROOT pacman -S --needed git
-
 BUILD=/home/build
 
 $CHROOT mkdir -p $BUILD
@@ -15,5 +13,6 @@ $CHROOT setfacl -d --set u::rwx,g::rwx,o::- $BUILD
 
 TRIZEN=$ROOT$BUILD/trizen
 git clone https://aur.archlinux.org/trizen.git $TRIZEN
-$CHROOT pushd $TRIZEN && sudo -u nobody makepkg
+$CHROOT pushd $TRIZEN && sudo -u nobody "makepkg -si --noconfirm"
 
+rm -rf $BUILD

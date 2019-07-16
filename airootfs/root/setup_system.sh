@@ -19,4 +19,3 @@ echo "anes-archlinux" > $ROOT/etc/hostname
 
 /root/install_aur_helper.sh
 /root/install_packages.sh
-

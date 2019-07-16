@@ -8,4 +8,3 @@ cp $new $backup
 sed -i 's/^#Server/Server/' $backup
 rankmirrors -n 10 $backup > $new
 cp -f $new /etc/pacman.d/mirrorlist
-

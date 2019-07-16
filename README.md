@@ -2,7 +2,7 @@
 
 ## Build
 
-Run `$ sudo ./build.sh`. ISO image will be located in `out` folder.
+Run `$ sudo ./build.sh`. Output ISO image will be located in `out` folder.
 
 ## Install
 
@@ -10,10 +10,12 @@ Run `$ sudo ./build.sh`. ISO image will be located in `out` folder.
 
 - Setup and mount root (and boot) partitions in `/mnt`
 
-- Launch `/root/setup_system.sh`
+- Launch `$ /root/setup_system.sh`
 
 - Setup user and boot manually
 
 ## Note
 
-By default, all packages located in `/root/packages` will be installed.
+- All packages located in `/root/packages` will be installed.
+
+- `rankmirrors.sh` script only loads USA & Canada mirrors.

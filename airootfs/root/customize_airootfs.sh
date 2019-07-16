@@ -23,4 +23,3 @@ systemctl enable pacman-init.service choose-mirror.service NetworkManager.servic
 systemctl set-default multi-user.target
 
 ln -sf /bin/nvim /bin/vim
-
