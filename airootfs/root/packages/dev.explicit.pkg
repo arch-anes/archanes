@@ -1,6 +1,7 @@
 arduino-avr-core
 arm-none-eabi-gcc
 arm-none-eabi-gdb
+arm-none-eabi-newlib
 aspnet-runtime
 binfmt-qemu-static
 code
