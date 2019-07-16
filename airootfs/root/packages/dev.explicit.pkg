@@ -4,6 +4,7 @@ arm-none-eabi-gdb
 arm-none-eabi-newlib
 aspnet-runtime
 binfmt-qemu-static
+cmake
 code
 docker
 docker-compose
