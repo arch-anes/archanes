@@ -10,11 +10,11 @@ Run `$ sudo ./build.sh`. Output ISO image will be located in `out` folder.
 
 - Setup and mount root (and boot) partitions in `/mnt`
 
-- Launch `$ /root/setup_system.sh`
+- Launch `$ bash /root/setup_system.sh`
 
 - Setup user and boot manually
 
-## Note
+## Notes
 
 - All packages located in `/root/packages` will be installed.
 
