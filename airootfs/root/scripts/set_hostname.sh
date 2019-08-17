@@ -1,7 +1,7 @@
 #/bin/bash
 
 echo "Enter hostname:"
-while [ -z $NEW_HOSTNAME ]; do
+while [ -z "$NEW_HOSTNAME" ]; do
     read -a NEW_HOSTNAME
 done
 

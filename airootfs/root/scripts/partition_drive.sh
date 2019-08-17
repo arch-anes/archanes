@@ -25,7 +25,7 @@ fi
 echo "Partitionning drive '$DRIVE'"
 echo "You need to add at least a UEFI boot partition and a Linux (root) filesystem"
 echo "Press enter to proceed..." && read
-while [ -z $BOOT_PARTITION ] || [ -z $ROOT_PARTITION ]; do
+while [ -z "$BOOT_PARTITION" ] || [ -z "$ROOT_PARTITION" ]; do
     cgdisk $DRIVE
     BOOT_PARTITION=$(fdisk -l $DRIVE | grep 'EFI' | cut -f 1 -d " ")
     ROOT_PARTITION=$(fdisk -l $DRIVE | grep 'Linux filesystem' | cut -f 1 -d " ")
