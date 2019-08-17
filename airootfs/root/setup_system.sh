@@ -5,6 +5,11 @@ export CHROOT="arch-chroot $ROOT_DIR"
 
 SCRIPTS_DIR="/root/scripts"
 
+until ping archlinux.org -c 1; do
+    echo "Unable to reach archlinux.org. Trying again soon."
+    sleep 5
+done
+
 $SCRIPTS_DIR/partition_drive.sh
 $SCRIPTS_DIR/rankmirrors.sh
 $SCRIPTS_DIR/install_base.sh
