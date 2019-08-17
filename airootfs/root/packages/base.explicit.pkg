@@ -5,6 +5,7 @@ android-udev
 bluez
 bluez-firmware
 bluez-utils
+cups-pdf
 dos2unix
 dosfstools
 epub2txt
@@ -31,7 +32,7 @@ openssh
 pacman-contrib
 pulseaudio
 pulseaudio-alsa
-pulseaudio-bluetooth
+pulseaudio-modules-bt-git
 screen
 sshfs
 syncthing

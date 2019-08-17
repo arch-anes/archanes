@@ -12,6 +12,7 @@ dotnet-sdk
 gdb
 ghc
 git
+gitkraken
 jdk8-openjdk
 jetbrains-toolbox
 jlink-software-and-documentation
@@ -20,11 +21,13 @@ libvirt
 mono
 ninja
 openocd
-putty
+picocom
 python-pip
+pvs-studio
 qemu
 qemu-arch-extra
 qemu-user-static-bin
+saleae-logic
 stack
 stm32cubemx
 valgrind
