@@ -24,4 +24,4 @@ Run `$ sudo ./build.sh`. Output ISO image will be located in `out` folder.
 
 - Swap has to be configured manually.
 
-- Locale is always set to `en_US.UTF-8`.
+- Locale is always set to `en_US.UTF-8` and timezone to `America/Montreal`.

@@ -7,5 +7,6 @@ $CHROOT locale-gen
 echo "LANG=en_US.UTF-8" > $ROOT_DIR/etc/locale.conf
 
 echo "Setting system clock"
+$CHROOT ln -sf /usr/share/zoneinfo/America/Montreal /etc/localtime
 $CHROOT timedatectl set-ntp true
 $CHROOT hwclock --systohc
