@@ -1,19 +1,29 @@
 #/bin/bash
 
-DRIVE="/dev/nvme0n1"
 ENCRYPTED_LABEL=cryptroot
 ENCRYPTED_PATH="/dev/mapper/$ENCRYPTED_LABEL"
 
+echo "Available drives:"
+DISKS=$(lsblk -dp | grep -o '^/dev[^ ]*')
+echo $DISKS
+
+echo "Select a drive to partition"
+while [ -z $DRIVE ]; do
+    read _DRIVE
+    DRIVE=$(echo $DISKS | grep $_DRIVE)
+done
+
 echo "Wiping drive '$DRIVE'"
-# wipe it here...
+sgdisk --zap-all $DRIVE
 
 echo "Partitionning drive '$DRIVE'"
-# add boot partition
-# add root partition
-
-# fetch partitions paths
-BOOT_PARTITION=
-ROOT_PARTITION=
+echo "You need to add at least a UEFI boot partition and a Linux (root) filesystem"
+echo "Press enter to proceed..." && read
+while [ -z $BOOT_PARTITION ] || [ -z $ROOT_PARTITION ]; do
+    cgdisk $DRIVE
+    BOOT_PARTITION=$(fdisk -l $DRIVE | grep 'EFI' | cut -f 1 -d " ")
+    ROOT_PARTITION=$(fdisk -l $DRIVE | grep 'Linux filesystem' | cut -f 1 -d " ")
+done
 
 echo "Encrypting root partition"
 cryptsetup -y -v luksFormat $ROOT_PARTITION

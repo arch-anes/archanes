@@ -8,14 +8,18 @@ Run `$ sudo ./build.sh`. Output ISO image will be located in `out` folder.
 
 - Boot into the ISO image
 
-- Setup and mount root (and boot) partitions in `/mnt`
-
 - Launch `$ bash /root/setup_system.sh`
-
-- Setup user and boot manually
 
 ## Notes
 
 - All packages located in `/root/packages` will be installed.
 
 - `rankmirrors.sh` script only loads USA & Canada mirrors.
+
+- The script opens `cgdisk` to partition the drive.
+
+- The root partition is encrypted
+
+- The script supports EFI boot partition only.
+
+- Swap has to be configured manually.
