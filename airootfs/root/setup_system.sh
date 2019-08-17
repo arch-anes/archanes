@@ -5,6 +5,8 @@ export CHROOT="arch-chroot $ROOT_DIR"
 
 SCRIPTS_DIR="/root/scripts"
 
+$SCRIPTS_DIR/partition_drive.sh
+
 $SCRIPTS_DIR/rankmirrors.sh
 
 pacstrap $ROOT_DIR base base-devel
