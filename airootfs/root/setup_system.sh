@@ -3,7 +3,9 @@
 export ROOT_DIR="/mnt"
 export CHROOT="arch-chroot $ROOT_DIR"
 
-/root/rankmirrors.sh
+SCRIPTS_DIR="/root/scripts"
+
+$SCRIPTS_DIR/rankmirrors.sh
 
 pacstrap $ROOT_DIR base base-devel
 genfstab -U $ROOT_DIR > $ROOT_DIR/etc/fstab
@@ -19,5 +21,6 @@ echo "LANG=en_US.UTF-8" > $ROOT_DIR/etc/locale.conf
 
 echo "anes-archlinux" > $ROOT_DIR/etc/hostname
 
-/root/install_aur_helper.sh
-/root/install_packages.sh
+$SCRIPTS_DIR/install_aur_helper.sh
+$SCRIPTS_DIR/install_packages.sh
+$SCRIPTS_DIR/add_user.sh
