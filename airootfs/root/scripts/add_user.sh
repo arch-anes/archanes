@@ -1,9 +1,9 @@
 #/bin/bash
 
 echo "Enter new user name:"
-while [ -z $USERNAME ]; do
+while [ -z "$USERNAME" ]; do
     read USERNAME
-    if [ -z $(echo $USERNAME | grep -E '^[a-z_]([a-z0-9_-]{0,31}|[a-z0-9_-]{0,30}\$)$') ]; then
+    if [ -z "$(echo $USERNAME | grep -E '^[a-z_]([a-z0-9_-]{0,31}|[a-z0-9_-]{0,30}\$)$')" ]; then
         USERNAME=''
         echo "Invalid username. Please try again."
     fi

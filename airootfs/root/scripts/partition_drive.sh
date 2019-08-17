@@ -7,14 +7,20 @@ echo "Available drives:"
 DISKS=$(lsblk -dp | grep -o '^/dev[^ ]*')
 echo $DISKS
 
-echo "Select a drive to partition"
-while [ -z $DRIVE ]; do
-    read _DRIVE
-    DRIVE=$(echo $DISKS | grep $_DRIVE)
+echo "Select a drive to partition: "
+while [ -z "$DRIVE" ]; do
+    read DRIVE
+    if [ -z "$(echo $DISKS | grep -w $DRIVE 2>/dev/null)" ]; then
+        DRIVE=''
+        echo "Invalid drive. Please try again."
+    fi
 done
 
-echo "Wiping drive '$DRIVE'"
-sgdisk --zap-all $DRIVE
+read -p "Do you want to wipe drive '$DRIVE'? " -n 1 -r
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    echo "Wiping drive '$DRIVE'"
+    sgdisk --zap-all $DRIVE
+fi
 
 echo "Partitionning drive '$DRIVE'"
 echo "You need to add at least a UEFI boot partition and a Linux (root) filesystem"
