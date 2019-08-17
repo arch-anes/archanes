@@ -2,6 +2,7 @@
 
 export ROOT_DIR="/mnt"
 export CHROOT="arch-chroot $ROOT_DIR"
+export INSTALL_CMD="sudo -u nobody trizen -Syu --noconfirm --needed --noedit"
 
 SCRIPTS_DIR="/root/scripts"
 
@@ -19,3 +20,4 @@ $SCRIPTS_DIR/add_user.sh
 $SCRIPTS_DIR/set_root_pw.sh
 $SCRIPTS_DIR/install_aur_helper.sh
 $SCRIPTS_DIR/install_packages.sh
+$SCRIPTS_DIR/install_graphics_drivers.sh
