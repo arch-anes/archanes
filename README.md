@@ -18,8 +18,10 @@ Run `$ sudo ./build.sh`. Output ISO image will be located in `out` folder.
 
 - The script opens `cgdisk` to partition the drive.
 
-- The root partition is encrypted
+- The root partition is encrypted.
 
 - The script supports EFI boot partition only.
 
 - Swap has to be configured manually.
+
+- Locale is always set to `en_US.UTF-8`.
