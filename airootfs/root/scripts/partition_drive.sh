@@ -44,5 +44,7 @@ mkfs.fat -F32 $ROOT_PARTITION
 mkfs.f2fs $ENCRYPTED_PATH
 
 echo "Mounting partitions"
+mkdir -p $ROOT_DIR
 mount $ENCRYPTED_PATH $ROOT_DIR
-mount $ROOT_PARTITION "$ROOT_DIR/boot"
+mkdir -p $BOOT_DIR
+mount $BOOT_PARTITION $BOOT_DIR
