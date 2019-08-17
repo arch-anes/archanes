@@ -1,4 +1,6 @@
 #/bin/bash
 
 echo "Enter root user password:"
-$CHROOT passwd
+until $CHROOT passwd; do
+    :
+done

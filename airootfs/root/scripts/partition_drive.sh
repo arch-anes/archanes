@@ -26,8 +26,12 @@ while [ -z $BOOT_PARTITION ] || [ -z $ROOT_PARTITION ]; do
 done
 
 echo "Encrypting root partition"
-cryptsetup -y -v luksFormat $ROOT_PARTITION
-cryptsetup open $ROOT_PARTITION $ENCRYPTED_LABEL
+until cryptsetup -y -v luksFormat $ROOT_PARTITION; do
+    :
+done
+until cryptsetup open $ROOT_PARTITION $ENCRYPTED_LABEL; do
+    :
+done
 
 echo "Formatting partitions"
 mkfs.fat -F32 $ROOT_PARTITION
