@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source /root/helpers.sh
-
 echo "Installing boot partition"
 
 $CHROOT bootctl install

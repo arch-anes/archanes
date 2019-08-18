@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source /root/helpers.sh
-
 PKG_DIR=/root/packages
 
 echo "Installaing explicit packages"
