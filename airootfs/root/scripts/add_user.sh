@@ -9,7 +9,7 @@ while [ -z "$USERNAME" ]; do
     fi
 done
 
-export USERNAME
+export USERNAME=$USERNAME
 
 echo "Creating user '$USERNAME'..."
 $CHROOT useradd -m -g users -G wheel,storage,power -s /usr/bin/fish $USERNAME
