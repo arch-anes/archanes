@@ -5,7 +5,7 @@ ENCRYPTED_PATH="/dev/mapper/$ENCRYPTED_LABEL"
 
 echo "Available drives:"
 DISKS=$(lsblk -dp | grep -o '^/dev[^ ]*')
-echo $DISKS
+lsblk
 
 echo "Select a drive to partition: "
 while [ -z "$DRIVE" ]; do
@@ -17,6 +17,7 @@ while [ -z "$DRIVE" ]; do
 done
 
 read -p "Do you want to wipe drive '$DRIVE'? " -n 1 -r
+echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     echo "Wiping drive '$DRIVE'"
     sgdisk --zap-all $DRIVE
