@@ -20,7 +20,7 @@ function execute_script() {
     if [ -f "$SCRIPT_DONE_PATH" ]; then
         echo "$SCRIPT_PATH already executed"
     else
-        $SCRIPT_PATH
+        source $SCRIPT_PATH
         touch $SCRIPT_DONE_PATH
     fi
 }
