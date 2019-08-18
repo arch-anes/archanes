@@ -9,10 +9,12 @@ code
 docker
 docker-compose
 dotnet-sdk
+firefox-developer-edition
 gdb
 ghc
 git
 gitkraken
+go
 jdk8-openjdk
 jetbrains-toolbox
 jlink-software-and-documentation
@@ -22,12 +24,13 @@ mono
 ninja
 openocd
 picocom
-python-pip
 pvs-studio
+python-pip
 qemu
 qemu-arch-extra
 qemu-user-static-bin
 saleae-logic
+slack-desktop
 stack
 stm32cubemx
 valgrind
