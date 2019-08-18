@@ -1,34 +1,27 @@
 #!/bin/bash
 
+source /root/helpers.sh
+
 export ROOT_DIR="/mnt"
 export BOOT_DIR="$ROOT_DIR/boot"
 export CHROOT="arch-chroot $ROOT_DIR"
 
 SCRIPTS_DIR="/root/scripts"
 
-until ping archlinux.org -c 1; do
-    echo "Unable to reach archlinux.org. Trying again soon."
-    sleep 5
-done
+wait_for_internet
 
-$SCRIPTS_DIR/partition_drive.sh
+execute_script "$SCRIPTS_DIR/partition_drive.sh"
 
-$SCRIPTS_DIR/rankmirrors.sh
-$SCRIPTS_DIR/install_base.sh
-$SCRIPTS_DIR/set_locale.sh
+execute_script "$SCRIPTS_DIR/rankmirrors.sh"
+execute_script "$SCRIPTS_DIR/install_base.sh"
+execute_script "$SCRIPTS_DIR/set_locale.sh"
 
-$SCRIPTS_DIR/add_user.sh
-$SCRIPTS_DIR/install_aur_helper.sh
+execute_script "$SCRIPTS_DIR/add_user.sh"
+execute_script "$SCRIPTS_DIR/install_aur_helper.sh"
 
-function install_pkgs() {
-    until $CHROOT sudo -u $USERNAME yay -Syu --noconfirm --needed --noeditmenu --nodiffmenu $@; do
-        :
-    done
-}
+execute_script "$SCRIPTS_DIR/install_packages.sh"
+execute_script "$SCRIPTS_DIR/install_boot.sh"
+execute_script "$SCRIPTS_DIR/install_graphics_drivers.sh"
 
-$SCRIPTS_DIR/install_packages.sh
-$SCRIPTS_DIR/install_boot.sh
-$SCRIPTS_DIR/install_graphics_drivers.sh
-
-$SCRIPTS_DIR/set_hostname.sh
-$SCRIPTS_DIR/set_root_pw.sh
+execute_script "$SCRIPTS_DIR/set_hostname.sh"
+execute_script "$SCRIPTS_DIR/set_root_pw.sh"

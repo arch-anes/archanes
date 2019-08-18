@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source /root/helpers.sh
+
 echo "Installing graphics drivers"
 
 VGA=$(lspci | grep VGA)
