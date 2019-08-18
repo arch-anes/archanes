@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 echo "Enter new user name:"
 while [ -z "$USERNAME" ]; do

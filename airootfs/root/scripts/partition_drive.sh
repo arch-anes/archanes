@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 ENCRYPTED_LABEL=cryptroot
 ENCRYPTED_PATH="/dev/mapper/$ENCRYPTED_LABEL"

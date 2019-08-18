@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 new=/tmp/mirrorlist
 backup=$new.backup

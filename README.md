@@ -8,7 +8,7 @@ Run `$ sudo ./build.sh`. Output ISO image will be located in `out` folder.
 
 - Boot into the ISO image
 
-- Launch `$ bash /root/setup_system.sh`
+- Launch `$ /root/setup_system.sh`
 
 ## Notes
 

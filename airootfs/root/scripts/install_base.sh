@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 echo "Installing base system"
 pacstrap $ROOT_DIR base base-devel

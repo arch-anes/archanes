@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 echo "Enter hostname:"
 while [ -z "$NEW_HOSTNAME" ]; do

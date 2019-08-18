@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 echo "Setting locale to 'en_US.UTF-8'"
 

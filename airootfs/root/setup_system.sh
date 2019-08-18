@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 export ROOT_DIR="/mnt"
 export BOOT_DIR="$ROOT_DIR/boot"

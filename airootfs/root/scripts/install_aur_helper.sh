@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 echo "Installaing AUR helper"
 
