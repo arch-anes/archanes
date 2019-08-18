@@ -41,7 +41,7 @@ until cryptsetup open $ROOT_PARTITION $ENCRYPTED_LABEL; do
 done
 
 echo "Formatting partitions"
-mkfs.fat -F32 $ROOT_PARTITION
+mkfs.fat -F32 $BOOT_PARTITION
 mkfs.f2fs $ENCRYPTED_PATH
 
 echo "Mounting partitions"
