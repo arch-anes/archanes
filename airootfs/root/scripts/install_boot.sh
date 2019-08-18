@@ -13,11 +13,11 @@ echo "initrd /initramfs-linux.img" >>$BOOT_FILE
 CPU=$(lscpu)
 case $CPU in
 *AMD*)
-    $CHROOT $INSTALL_CMD amd-ucode
+    install_pkgs amd-ucode
     echo "initrd /amd-ucode.img" >>$BOOT_FILE
     ;;
 *Intel*)
-    $CHROOT $INSTALL_CMD intel-ucode
+    install_pkgs intel-ucode
     echo "initrd /intel-ucode.img" >>$BOOT_FILE
     ;;
 *)

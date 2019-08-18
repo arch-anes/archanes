@@ -19,7 +19,11 @@ $SCRIPTS_DIR/install_base.sh
 $SCRIPTS_DIR/add_user.sh
 $SCRIPTS_DIR/install_aur_helper.sh
 
-export INSTALL_CMD="sudo -u $USERNAME yay -Syu --noconfirm --needed --noeditmenu"
+function install_pkgs() {
+    until $CHROOT sudo -u $USERNAME yay -Syu --noconfirm --needed --noeditmenu --nodiffmenu $@; do
+        :
+    done
+}
 
 $SCRIPTS_DIR/install_packages.sh
 $SCRIPTS_DIR/install_boot.sh
