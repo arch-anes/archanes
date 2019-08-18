@@ -8,7 +8,7 @@ Run `$ sudo ./build.sh`. Output ISO image will be located in `out` folder.
 
 - Boot into the ISO image
 
-- Launch `$ /root/setup_system.sh`
+- Launch `$ ./setup_system.sh`
 
 ## Notes
 
@@ -18,7 +18,7 @@ Run `$ sudo ./build.sh`. Output ISO image will be located in `out` folder.
 
 - The script opens `cgdisk` to partition the drive.
 
-- The root partition is encrypted.
+- The root partition is encrypted and formatted to F2FS.
 
 - The script supports EFI boot partition only.
 
