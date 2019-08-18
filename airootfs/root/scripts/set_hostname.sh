@@ -6,4 +6,4 @@ while [ -z "$NEW_HOSTNAME" ]; do
 done
 
 echo "Setting hostname to '$NEW_HOSTNAME'"
-echo $NEW_HOSTNAME > $ROOT_DIR/etc/hostname
+echo $NEW_HOSTNAME >$ROOT_DIR/etc/hostname

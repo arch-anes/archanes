@@ -15,6 +15,7 @@ done
 $SCRIPTS_DIR/partition_drive.sh
 $SCRIPTS_DIR/rankmirrors.sh
 $SCRIPTS_DIR/install_base.sh
+$SCRIPTS_DIR/install_boot.sh
 $SCRIPTS_DIR/install_aur_helper.sh
 $SCRIPTS_DIR/install_packages.sh
 $SCRIPTS_DIR/install_graphics_drivers.sh

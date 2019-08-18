@@ -27,8 +27,8 @@ echo "You need to add at least a UEFI boot partition and a Linux (root) filesyst
 echo "Press enter to proceed..." && read
 while [ -z "$BOOT_PARTITION" ] || [ -z "$ROOT_PARTITION" ]; do
     cgdisk $DRIVE
-    BOOT_PARTITION=$(fdisk -l $DRIVE | grep 'EFI' | cut -f 1 -d " ")
-    ROOT_PARTITION=$(fdisk -l $DRIVE | grep 'Linux filesystem' | cut -f 1 -d " ")
+    export BOOT_PARTITION=$(fdisk -l $DRIVE | grep 'EFI' | cut -f 1 -d " ")
+    export ROOT_PARTITION=$(fdisk -l $DRIVE | grep 'Linux filesystem' | cut -f 1 -d " ")
 done
 
 echo "Encrypting root partition"
