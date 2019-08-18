@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function install_pkgs() {
+function install_packages() {
     until $CHROOT sudo -u $USERNAME yay -Syu --noconfirm --needed --noeditmenu --nodiffmenu $@; do
         :
     done

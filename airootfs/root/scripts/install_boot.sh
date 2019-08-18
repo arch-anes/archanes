@@ -15,11 +15,11 @@ echo "initrd /initramfs-linux.img" >>$BOOT_FILE
 CPU=$(lscpu)
 case $CPU in
 *AMD*)
-    install_pkgs amd-ucode
+    install_packages amd-ucode
     echo "initrd /amd-ucode.img" >>$BOOT_FILE
     ;;
 *Intel*)
-    install_pkgs intel-ucode
+    install_packages intel-ucode
     echo "initrd /intel-ucode.img" >>$BOOT_FILE
     ;;
 *)

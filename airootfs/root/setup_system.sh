@@ -19,7 +19,7 @@ execute_script "$SCRIPTS_DIR/set_locale.sh"
 execute_script "$SCRIPTS_DIR/add_user.sh"
 execute_script "$SCRIPTS_DIR/install_aur_helper.sh"
 
-execute_script "$SCRIPTS_DIR/install_packages.sh"
+execute_script "$SCRIPTS_DIR/install_user_packages.sh"
 execute_script "$SCRIPTS_DIR/install_boot.sh"
 execute_script "$SCRIPTS_DIR/install_graphics_drivers.sh"
 
