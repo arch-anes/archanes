@@ -3,7 +3,7 @@
 export ROOT_DIR="/mnt"
 export BOOT_DIR="$ROOT_DIR/boot"
 export CHROOT="arch-chroot $ROOT_DIR"
-export INSTALL_CMD="sudo -u nobody trizen -Syu --noconfirm --needed --noedit"
+export INSTALL_CMD="sudo -u nobody yay -Syu --noconfirm --needed --noedit"
 
 SCRIPTS_DIR="/root/scripts"
 

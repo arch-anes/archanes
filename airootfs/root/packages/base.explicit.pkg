@@ -37,7 +37,6 @@ screen
 sshfs
 syncthing
 thefuck
-trizen
 udiskie
 ufw
 unrar
@@ -45,4 +44,5 @@ unzip
 vifm
 wd719x-firmware
 wget
+yay
 zip

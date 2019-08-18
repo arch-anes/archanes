@@ -10,8 +10,8 @@ $CHROOT chmod g+ws $BUILD_DIR
 $CHROOT setfacl -m u::rwx,g::rwx $BUILD_DIR
 $CHROOT setfacl -d --set u::rwx,g::rwx,o::- $BUILD_DIR
 
-CLONE_DIR=$BUILD_DIR/trizen
-git clone https://aur.archlinux.org/trizen.git $ROOT_DIR$CLONE_DIR
+CLONE_DIR=$BUILD_DIR/yay
+git clone https://aur.archlinux.org/yay.git $ROOT_DIR$CLONE_DIR
 $CHROOT chown nobody:nobody $CLONE_DIR
 $CHROOT bash -c "pushd $CLONE_DIR && sudo -u nobody makepkg --noconfirm"
 
