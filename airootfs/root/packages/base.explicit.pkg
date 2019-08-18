@@ -20,6 +20,7 @@ htop
 linux-headers
 lsof
 mediainfo
+megatools
 mpc
 mpd
 ncmpcpp
@@ -33,7 +34,6 @@ pacman-contrib
 pulseaudio
 pulseaudio-alsa
 pulseaudio-modules-bt-git
-screen
 sshfs
 stow
 syncthing
