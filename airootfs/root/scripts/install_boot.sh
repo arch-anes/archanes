@@ -8,7 +8,6 @@ BOOT_FILE=$BOOT_DIR/loader/entries/arch.conf
 
 echo "title Arch Linux" >$BOOT_FILE
 echo "linux /vmlinuz-linux" >>$BOOT_FILE
-echo "initrd /initramfs-linux.img" >>$BOOT_FILE
 
 CPU=$(lscpu)
 case $CPU in
@@ -25,6 +24,7 @@ case $CPU in
     ;;
 esac
 
+echo "initrd /initramfs-linux.img" >>$BOOT_FILE
 echo "options cryptdevice=UUID=$(blkid -s "UUID" -o value $ROOT_PARTITION):cmain root=/dev/mapper/cmain quiet rw" >>$BOOT_FILE
 
 echo "Adapting mkinitcpio.conf"
