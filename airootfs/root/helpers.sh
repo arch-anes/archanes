@@ -6,6 +6,10 @@ function install_packages() {
     done
 }
 
+function install_packages_dependencies() {
+    install_packages --asdeps $@
+}
+
 function wait_for_internet() {
     until ping archlinux.org -c 1; do
         echo "Unable to reach archlinux.org. Trying again soon."
