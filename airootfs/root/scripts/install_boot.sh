@@ -30,11 +30,6 @@ esac
 echo "initrd /initramfs-linux.img" >>$ARCH_BOOT_FILE
 echo "options cryptdevice=UUID=$(blkid -s "UUID" -o value $ROOT_PARTITION):cmain root=/dev/mapper/cmain quiet rw" >>$ARCH_BOOT_FILE
 
-echo "Creating Windows 10 boot entry"
-WINDOWS_BOOT_FILE=$BOOT_DIR/loader/entries/windows.conf
-echo "title Windows 10" >$WINDOWS_BOOT_FILE
-echo "efi /EFI/MICROSOFT/BOOT/BOOTMGFW.EFI" >>$WINDOWS_BOOT_FILE
-
 echo "Setting default boot loader"
 LOADER_CONF_FILE=$BOOT_DIR/loader/loader.conf
 echo "timeout 3" >$LOADER_CONF_FILE
