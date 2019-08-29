@@ -3,6 +3,9 @@
 echo "Installing base system"
 pacstrap $ROOT_DIR base base-devel
 
+echo "Enabling multilib"
+sed -i "/\[multilib\]/,/Include/"'s/^#//' $ROOT_DIR/etc/pacman.conf
+
 echo "Generating fstab"
 genfstab -U $ROOT_DIR >$ROOT_DIR/etc/fstab
 
