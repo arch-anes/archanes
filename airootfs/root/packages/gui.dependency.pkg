@@ -1,3 +1,7 @@
 libva-mesa-driver
 mesa-vdpau
+noto-fonts-cjk
+noto-fonts-emoji
+noto-fonts-extra
+xorg-server-xwayland
 zathura-pdf-mupdf

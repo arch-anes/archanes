@@ -6,6 +6,7 @@ bluez
 bluez-firmware
 bluez-utils
 cups-pdf
+dmidecode
 dos2unix
 dosfstools
 epub2txt
@@ -38,7 +39,6 @@ sshfs
 stow
 syncthing
 thefuck
-tor-browser
 udiskie
 ufw
 unrar
@@ -47,5 +47,6 @@ usbip
 vifm
 wd719x-firmware
 wget
+wol
 yay
 zip
