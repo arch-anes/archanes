@@ -7,3 +7,6 @@ done
 
 echo "Setting hostname to '$NEW_HOSTNAME'"
 echo $NEW_HOSTNAME >$ROOT_DIR/etc/hostname
+
+echo "Enabling NetworkManager"
+$CHROOT systemctl enable NetworkManager
