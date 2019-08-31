@@ -7,6 +7,7 @@ export BOOT_DIR="$ROOT_DIR/boot"
 export CHROOT="arch-chroot $ROOT_DIR"
 
 SCRIPTS_DIR="/root/scripts"
+CONFIGS_DIR="/root/configs"
 
 wait_for_internet
 
