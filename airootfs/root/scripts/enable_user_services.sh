@@ -8,3 +8,6 @@ enable_services syncthing@$USERNAME.service
 
 echo "Enabling Docker"
 enable_services docker.service
+
+echo "Enabling MPD"
+enable_services --user mpd.service
