@@ -7,6 +7,7 @@ echo "Enabling Syncthing"
 enable_services syncthing@$USERNAME.service
 
 echo "Enabling Docker"
+$CHROOT gpasswd -a $USERNAME docker
 enable_services docker.service
 
 echo "Enabling MPD"
