@@ -12,3 +12,6 @@ enable_services docker.service
 
 echo "Enabling MPD"
 enable_services --user mpd.service
+
+echo "Enabling firewall"
+$CHROOT ufw enable
