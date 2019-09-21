@@ -22,6 +22,9 @@ linux-headers
 lsof
 mediainfo
 megatools
+mkinitcpio-netconf
+mkinitcpio-tinyssh
+mkinitcpio-utils
 mpc
 mpd
 ncmpcpp

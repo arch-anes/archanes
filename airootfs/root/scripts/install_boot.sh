@@ -4,7 +4,7 @@ echo "Installing boot partition"
 $CHROOT bootctl install
 
 echo "Adapting mkinitcpio.conf"
-sed -i 's/^HOOKS=.*/HOOKS=(base udev autodetect keyboard modconf block encrypt filesystems fsck)/' $ROOT_DIR/etc/mkinitcpio.conf
+cp -f $CONFIGS_DIR/mkinitcpio.conf $ROOT_DIR/etc/mkinitcpio.conf
 $CHROOT mkinitcpio -p linux
 
 echo "Creating Arch Linux boot entry"
@@ -28,7 +28,7 @@ case $CPU in
 esac
 
 echo "initrd /initramfs-linux.img" >>$ARCH_BOOT_FILE
-echo "options cryptdevice=UUID=$(blkid -s "UUID" -o value $ROOT_PARTITION):cmain root=/dev/mapper/cmain quiet rw" >>$ARCH_BOOT_FILE
+echo "options cryptdevice=UUID=$(blkid -s "UUID" -o value $ROOT_PARTITION):cmain ip=:::::eth0:dhcp root=/dev/mapper/cmain quiet rw" >>$ARCH_BOOT_FILE
 
 echo "Setting default boot loader"
 LOADER_CONF_FILE=$BOOT_DIR/loader/loader.conf
