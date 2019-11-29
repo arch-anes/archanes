@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Installing base system"
-pacstrap $ROOT_DIR base base-devel
+pacstrap $ROOT_DIR base base-devel linux linux-firmware
 
 echo "Enabling multilib"
 sed -i "/\[multilib\]/,/Include/"'s/^#//' $ROOT_DIR/etc/pacman.conf
