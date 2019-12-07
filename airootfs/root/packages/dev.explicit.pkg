@@ -3,6 +3,7 @@ arm-none-eabi-gcc
 arm-none-eabi-gdb
 arm-none-eabi-newlib
 aspnet-runtime
+binfmt-qemu-static
 chromium
 clang
 cmake
@@ -26,6 +27,7 @@ pvs-studio
 python-pip
 qemu
 qemu-arch-extra
+qemu-user-static-bin
 saleae-logic
 stm32cubemx
 valgrind
