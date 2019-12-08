@@ -20,6 +20,7 @@ gptfdisk
 htop
 linux-headers
 lsof
+man
 mediainfo
 megatools
 mkinitcpio-netconf
