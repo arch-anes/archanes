@@ -3,5 +3,6 @@ mesa-vdpau
 noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
+qt5-wayland
 xorg-server-xwayland
 zathura-pdf-mupdf
