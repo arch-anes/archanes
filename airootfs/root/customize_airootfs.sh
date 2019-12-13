@@ -19,7 +19,9 @@ sed -i 's/#\(HandleSuspendKey=\)suspend/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleHibernateKey=\)hibernate/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 
-systemctl enable pacman-init.service choose-mirror.service NetworkManager.service
+systemctl enable pacman-init.service choose-mirror.service
+systemctl enable NetworkManager.service
+systemctl enable sshd.service
 systemctl set-default multi-user.target
 
 ln -sf /bin/nvim /bin/vim
