@@ -29,6 +29,8 @@ function execute_script() {
     SCRIPT_PATH=$(realpath $1)
     SCRIPT_DONE_PATH="$SCRIPT_PATH.done"
 
+    echo -e '\n\n'
+    echo "====================== $SCRIPT_PATH ======================" 
     if [ -f "$SCRIPT_DONE_PATH" ]; then
         echo "$SCRIPT_PATH already executed"
     else
