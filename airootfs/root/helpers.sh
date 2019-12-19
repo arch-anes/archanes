@@ -1,7 +1,11 @@
 #!/bin/bash
 
+function run_as_user() {
+    $CHROOT sudo -u $USERNAME $@
+}
+
 function install_packages() {
-    until $CHROOT sudo -u $USERNAME yay -Syu --noconfirm --needed --noeditmenu --nodiffmenu $@; do
+    until run_as_user yay -Syu --noconfirm --needed --noeditmenu --nodiffmenu $@; do
         :
     done
 }

@@ -27,3 +27,5 @@ execute_script "$SCRIPTS_DIR/install_boot.sh"
 execute_script "$SCRIPTS_DIR/set_hostname.sh"
 execute_script "$SCRIPTS_DIR/enable_user_services.sh"
 execute_script "$SCRIPTS_DIR/set_root_pw.sh"
+
+execute_script "$SCRIPTS_DIR/install_dotfiles.sh"
