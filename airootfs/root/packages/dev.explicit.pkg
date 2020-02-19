@@ -1,7 +1,7 @@
+ansible
+archiso
 arduino-avr-core
-arm-none-eabi-gcc
 arm-none-eabi-gdb
-arm-none-eabi-newlib
 aspnet-runtime
 binfmt-qemu-static
 chromium
@@ -11,6 +11,7 @@ code
 docker-compose
 dotnet-sdk
 firefox-developer-edition
+gcc-arm-none-eabi-bin
 gdb
 git
 gitkraken

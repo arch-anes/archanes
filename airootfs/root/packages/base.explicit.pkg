@@ -2,6 +2,7 @@ aic94xx-firmware
 alsa-utils
 android-tools
 android-udev
+bind-tools
 bluez
 bluez-firmware
 bluez-utils
@@ -33,12 +34,14 @@ neovim
 networkmanager
 ntfs-3g
 ntp
+onedrive-abraunegg
 openssh
 p7zip
 pacman-contrib
 pulseaudio
 pulseaudio-alsa
 pulseaudio-modules-bt-git
+rsync
 sshfs
 stow
 syncthing
