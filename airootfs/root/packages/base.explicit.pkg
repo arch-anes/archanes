@@ -19,6 +19,7 @@ gnome-keyring
 gperf
 gptfdisk
 htop
+inotify-tools
 linux-headers
 lsof
 man

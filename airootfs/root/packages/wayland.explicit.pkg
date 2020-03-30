@@ -2,12 +2,13 @@ grim
 kanshi
 mako
 qt5-wayland
-redshift-wlr-gamma-control
+redshift-wlr-gamma-control-git
 slurp
 sway
 swayidle
 swaylock-effects-git
 waybar
+wayvnc
 wdisplays-git
 wl-clipboard
 wshowkeys-git

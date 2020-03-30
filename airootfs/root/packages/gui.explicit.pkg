@@ -1,5 +1,6 @@
 adapta-gtk-theme
 adobe-source-han-serif-otc-fonts
+albert
 arc-gtk-theme
 arc-icon-theme
 discord
@@ -10,6 +11,8 @@ keepassxc
 kitty
 lib32-mesa
 libappindicator
+libappindicator-gtk2
+libappindicator-gtk3
 light
 lxappearance
 mesa
@@ -18,9 +21,9 @@ noto-fonts
 paprefs
 pavucontrol
 qt5-styleplugins
-remmina
 rofi
 thunderbird
+tigervnc
 ttf-dejavu
 ttf-droid
 ttf-fira-code

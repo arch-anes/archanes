@@ -13,10 +13,11 @@ dotnet-sdk
 firefox-developer-edition
 gcc-arm-none-eabi-bin
 gdb
+ghidra
 git
 gitkraken
 go
-jdk8-openjdk
+jdk-openjdk
 jetbrains-toolbox
 lazydocker
 libvirt
